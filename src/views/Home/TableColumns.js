@@ -7,12 +7,12 @@ export const mianTableColumns = [
   {
     id: "2",
     title: "High Price",
-    selector: "h",
+    cell: (row) => <small>{row.h}</small>,
   },
   {
     id: "3",
     title: "Open Price",
-    selector: "o",
+    cell: (row) => <small>{row.o}</small>,
   },
 ];
 export const expandColumns = [
@@ -24,11 +24,11 @@ export const expandColumns = [
   {
     id: "2",
     title: "Low Price",
-    selector: "l",
+    cell: (row) => <small>{row.l}</small>,
   },
   {
     id: "3",
     title: "Open Price",
-    selector: "o",
+    cell: (row) => <small>{row.o}</small>,
   },
 ];
