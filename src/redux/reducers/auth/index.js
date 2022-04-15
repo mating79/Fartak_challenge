@@ -1,13 +1,22 @@
-import { GET_DATA, ROW_EXPAND, ROW_EXPAND_DATA } from "redux/actions/types";
+import {
+  FILTER,
+  GET_DATA,
+  ROW_EXPAND,
+  ROW_EXPAND_DATA,
+} from "redux/actions/types";
 
-const initialState = { activeRow: null, selectedCoin: [] };
+const initialState = {
+  activeRow: null,
+  selectedCoin: [],
+  filter: { coinName: "" },
+};
 
 const authReducer = (state = initialState, { type, data }) => {
   switch (type) {
     case GET_DATA:
       return {
         ...state,
-        coins: data,
+        coins: data.filter((item) => item.s.includes(state.filter.coinName)),
       };
     case ROW_EXPAND:
       return {
@@ -18,6 +27,11 @@ const authReducer = (state = initialState, { type, data }) => {
       return {
         ...state,
         selectedCoin: data,
+      };
+    case FILTER:
+      return {
+        ...state,
+        filter: data,
       };
 
     default:

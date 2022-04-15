@@ -18,7 +18,7 @@ export const handleConnectSocket = () => {
       if (data.id !== 1) {
         dispatch({
           type: GET_DATA,
-          data,
+          data: data.sort(),
         });
       }
     };
