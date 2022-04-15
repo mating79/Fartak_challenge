@@ -1,0 +1,113 @@
+//color variables
+$primary-color: #7367ef;
+$secondary-color: #343d55;
+$text-color: #d0d2d6;
+$bg-card-color: #283046;
+
+//font variables
+$font-size-base: 10px;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu";
+  color: $text-color;
+  font-size: 1.6rem;
+}
+
+.home-container {
+  min-width: 60rem;
+}
+
+.card {
+  background-color: $bg-card-color;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 8px rgba($color: $text-color, $alpha: 0.4);
+  padding: 3rem;
+  margin: 1rem;
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.table {
+  border: 0.1rem solid $secondary-color;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  &-body {
+    border-top: $secondary-color solid 0.1rem;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &-row {
+    display: flex;
+    border-top: 0.1rem solid $secondary-color;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  &-cell {
+    min-width: 10rem;
+    text-align: center;
+    // border-left: 0.1rem solid rgba($text-color, 0.3);
+  }
+  &-exapnd-component {
+    padding: 2rem;
+    border: 0.1rem solid $secondary-color;
+  }
+}
+
+.custom {
+  &-input {
+    width: 100%;
+    background-color: $secondary-color;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  &-button {
+    background-color: $primary-color;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    outline: none;
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  &-down {
+    transform: rotate(45deg);
+  }
+  &-up {
+    transform: rotate(-135deg);
+  }
+}
