@@ -19,13 +19,13 @@ const TableRow = (props) => {
   };
 
   useEffect(() => {
-    if (collapse == index) {
+    if (collapse === index) {
       dispatch({
         type: ROW_EXPAND_DATA,
         data: row,
       });
     }
-  }, [row]);
+  }, [row, collapse, dispatch, index]);
 
   return (
     <div className="table-row-wrapper">

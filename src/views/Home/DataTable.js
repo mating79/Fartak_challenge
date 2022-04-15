@@ -1,7 +1,7 @@
 import Loading from "views/Loading";
 import React from "react";
 import { useSelector } from "react-redux";
-import Table from "components/Table";
+import Table from "components/table";
 import { expandColumns, mianTableColumns } from "./TableColumns";
 
 const DataTable = () => {
