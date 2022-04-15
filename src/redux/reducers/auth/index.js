@@ -16,7 +16,9 @@ const authReducer = (state = initialState, { type, data }) => {
     case GET_DATA:
       return {
         ...state,
-        coins: data.filter((item) => item.s.includes(state.filter.coinName)),
+        coins: data.filter((item) =>
+          item.s.includes(state.filter.coinName.toLocaleUpperCase())
+        ),
       };
     case ROW_EXPAND:
       return {

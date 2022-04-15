@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { handleConnectSocket } from "redux/actions/auth";
+
 import DataTable from "./DataTable";
 import Filters from "./Filters";
+import { handleConnectSocket } from "redux/actions/auth";
 
 const Home = () => {
   const dispatch = useDispatch();

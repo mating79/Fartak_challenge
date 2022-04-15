@@ -1,4 +1,5 @@
 import React from "react";
+
 import TableRow from "./TableRow";
 
 const Table = ({ columns, data, expandable, expandComponent }) => {
