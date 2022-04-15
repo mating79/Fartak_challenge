@@ -8,7 +8,7 @@ import {
 const initialState = {
   activeRow: null,
   selectedCoin: [],
-  filter: { coinName: "" },
+  filter: {},
 };
 
 const authReducer = (state = initialState, { type, data }) => {

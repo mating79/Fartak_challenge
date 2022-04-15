@@ -1,7 +1,7 @@
 import { GET_DATA } from "../types";
 
 export const handleConnectSocket = () => {
-  return async (dispatch) => {
+  return (dispatch) => {
     const socket = new WebSocket("wss://stream.binance.com:9443/ws");
     const msg = {
       method: "SUBSCRIBE",
@@ -18,7 +18,7 @@ export const handleConnectSocket = () => {
       if (data.id !== 1) {
         dispatch({
           type: GET_DATA,
-          data: data.sort(),
+          data: data,
         });
       }
     };

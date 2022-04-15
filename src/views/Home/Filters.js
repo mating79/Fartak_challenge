@@ -8,9 +8,7 @@ const Filters = () => {
   const coin = useInput("");
 
   useEffect(() => {
-    if (coin.value) {
-      dispatch({ type: FILTER, data: { coinName: coin.value } });
-    }
+    dispatch({ type: FILTER, data: { coinName: coin.value } });
   }, [coin.value]);
 
   return (
